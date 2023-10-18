@@ -1,0 +1,77 @@
+package com.question4;
+
+import java.util.*;
+
+public class Program01 {
+	
+	public static void main(String[]args)
+	{  
+	List<Books> list=  new ArrayList<>();
+	Books b;
+	int ch;
+	
+	do {
+		System.out.println("0- Exit");
+		System.out.println("1- Add Book");
+		System.out.println("2- Display all Books ");
+		System.out.println("3- Remove Book at Index");
+		System.out.println("4- Check book present or not ");
+		System.out.println("5- Deletes all Book");
+		System.out.println("6- Display no of Books ");
+		System.out.println("7- Sort by price");
+		
+		ch=new Scanner(System.in).nextInt();
+		switch (ch)
+		{
+		case 1:
+			b = new Books();
+			b.accept();
+			list.add(b);
+			
+			break;
+		case 2: 
+			for(Books e:list)
+				System.out.println(e);
+			 break;
+		case 3:
+			System.out.println("Enter no of book which you want to remove ");
+			int n= new Scanner (System.in).nextInt();
+			list.remove(n);
+			break;
+		case 4:
+			System.out.println("Enter ISBN number to check for ");
+			String isb=new Scanner(System.in).next();
+			Books key=new Books();
+			key.setIsbn(isb);
+			if (list.contains(key))
+				  System.out.println("Book Found");
+			else 
+				 System.out.println("Book not Found");
+			break;
+		case 5:  //delete all books 
+			    list.clear();
+			break;
+		case 6: // display no.of  books 
+				System.out.println("Size =  "+ list.size());
+			break;
+		case 7: //sort by price descending order
+			  class PriceComparator implements Comparator<Books>
+			  {
+				  @Override
+				public int compare(Books b1, Books b2) {
+					int diff = -Double.compare(b1.getPrice(), b2.getPrice());
+					return diff;
+				}
+			  }
+			  PriceComparator b1= new PriceComparator();
+			  list.sort(b1);			  
+			  break;
+		
+		}
+		
+	}while(ch!=0);
+	
+	}
+	
+
+}

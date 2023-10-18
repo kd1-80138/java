@@ -1,0 +1,56 @@
+package com.question4;
+
+import java.util.*;
+
+public class Program01 {
+	
+	public static void main(String[]args)
+	{  
+	List<Books> list=  new ArrayList<>();
+	Books b;
+	int ch;
+	
+	do {
+		System.out.println("0- Exit");
+		System.out.println("1- Add Book");
+		System.out.println("2- Display all Books ");
+		System.out.println("3- Remove Book at Index");
+		System.out.println("4- Check book present or not ");
+		System.out.println("5- Deletes all Book");
+		System.out.println("6- Display no of Books ");
+		System.out.println("7- Sort by price");
+		
+		ch=new Scanner(System.in).nextInt();
+		switch (ch)
+		{
+		case 1:
+			b = new Books();
+			b.accept();
+			list.add(b);
+			
+			break;
+		case 2: 
+			for(Books e:list)
+				System.out.println(e);
+			 break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		case 6:
+			break;
+		case 7:
+			break;
+			default:
+				System.out.println("Invalid choice Entered");
+		
+		}
+		
+	}while(ch!=0);
+	
+	}
+	
+
+}
