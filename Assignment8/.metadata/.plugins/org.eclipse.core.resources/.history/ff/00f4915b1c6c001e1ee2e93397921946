@@ -1,0 +1,77 @@
+package com.sunbeam;
+class Person{
+	private String name ;
+
+	 
+	public person() {
+		
+	}
+	
+	public person(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void accept()
+	{
+		System.out.println("Enter Name ");
+		this.name=new Scanner(System.in).next();
+	}
+}
+
+
+//Employee class
+ class Employee extends  Person
+ {
+	 private int empid;
+	 private double salary;
+	 
+	 public Employee() {
+			super();
+		}
+	 
+	 
+	public Employee(int empid, double salary) {
+		super();
+		this.empid = empid;
+		this.salary = salary;
+	}
+
+
+	public int getEmpid() {
+		return empid;
+	}
+	public void setEmpid(int empid) {
+		this.empid = empid;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	public void accept()
+	{
+		super.accept();
+		System.out.println("enter empid");
+		this.empid= new Scanner(System.in).nextInt();
+		System.out.println("enter Salary");
+		this.salary= new Scanner(System.in).nextDouble();
+		
+		
+	}
+	
+	 
+ }
+
+
+public class program {
+	
+
+}

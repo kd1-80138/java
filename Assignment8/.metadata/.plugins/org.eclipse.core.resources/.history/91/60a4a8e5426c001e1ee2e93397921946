@@ -1,0 +1,26 @@
+package com.sunbeam;
+class GenericBox<T>
+{
+	private T obj ;
+	
+	public void setObj(T obj)
+	{
+		this.obj=obj;
+	}
+	public T getObj()
+	{
+		return this.obj;
+	}
+	public void accept()
+	{
+		obj.accept();
+	}
+	public void calculateSalary()
+	{
+	    System.out.println(obj.calculateTotalSalary);
+	}
+}
+
+public class Program01 {
+
+}

@@ -1,0 +1,37 @@
+package com.sunbeam;
+import java.util.*;
+
+
+public class SalariedEmp  extends Empoloyee{
+	private double weeklysal;
+
+	public SalariedEmp(String fname, String lname, long ssn, double weeklysal) {
+		super(fname, lname, ssn);
+		this.weeklysal = weeklysal;
+	}
+	public SalariedEmp ()
+	{
+		
+	}
+	public double getWeeklysal() {
+		return weeklysal;
+	}
+	public void setWeeklysal(double weeklysal) {
+		this.weeklysal = weeklysal;
+	}
+	public void accept()
+	{
+		super.accept();
+		System.out.println("Enter weekley salary");
+		this.weeklysal=new Scanner(System.in).nextDouble();
+	}
+	
+	@Override
+	public String toString() {
+		return (super.toString()+"  Weekly salary =  "+this.weeklysal ) ;
+	}
+	
+	
+
+}
+
