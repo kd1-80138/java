@@ -1,0 +1,10 @@
+package com.payroll;
+
+public class CommEmp extends Employee {
+	private int commrate;
+private int grosssale;
+
+
+
+
+}

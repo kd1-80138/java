@@ -1,0 +1,16 @@
+package com.payroll;
+import java.util.*;
+
+public class test {
+	public static void main(String[]args)
+	{
+		//Salaried Employee;
+		Employee e1 = new SalariedEmp();
+		e1.accept();
+		System.out.println(e1.toString());
+		e1.calculateSal();
+		
+		
+	}
+
+}
