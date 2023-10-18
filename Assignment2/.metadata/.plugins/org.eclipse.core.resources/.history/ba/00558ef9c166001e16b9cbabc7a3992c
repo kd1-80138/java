@@ -1,0 +1,48 @@
+package invoice;
+import java.util.*;
+public class Datetest {
+	
+	private int day;
+	private int month;
+	private int year;
+	Datetest(int day, int month, int year) {
+		super();
+		this.day = day;
+		this.month = month;
+		this.year = year;
+	}
+	Datetest() {
+		this(0,0,0);  //constructor chaining;
+	}
+	public int getDay() {
+		return day;
+	}
+	public void setDay(int day) {
+		this.day = day;
+	}
+	public int getMonth() {
+		return month;
+	}
+	public void setMonth(int month) {
+		this.month = month;
+	}
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
+	public void accept()
+	{
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter day");
+		this.day=sc.nextInt();
+		System.out.println("Enter Month");
+		this.Month=sc.nextInt();
+		System.out.println("Enter day");
+		this.day=sc.nextInt();
+		
+	}
+	
+
+}

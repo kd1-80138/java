@@ -1,0 +1,8 @@
+package tester;
+import com.app.geometry.*;
+
+public class TestPoint {
+	point2D p1(5,5);
+	point2D p2(4,5);
+
+}

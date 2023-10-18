@@ -1,0 +1,24 @@
+package tester;
+import com.app.geometry.*;
+
+public class TestPoint {
+	
+	public static void main(String [] args)
+	{
+	point2D po=new point2D(5,5);
+	point2D pi=new point2D(4,5);
+	 System.out.println(po.getDetails());
+	 System.out.println(pi.getDetails());
+	 
+	 System.out.println("to check equal");
+	 if(pi.isEqual())
+	 {
+		 System.out.println(" Equal");
+		 
+	 }
+	 else {
+		 System.out.println("not equal points ");
+	 }
+	}
+
+}

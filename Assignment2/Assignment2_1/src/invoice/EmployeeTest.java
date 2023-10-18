@@ -1,0 +1,96 @@
+package invoice;
+import java.util.*;
+//Q2. Create a class called Employee that includes three fields—a first name (type String), a last
+//name (type String) and a monthly salary (double). Provide a constructor that initializes the three
+//instance variables. Provide a set and a get method for each instance variable. If the monthly salary
+//is not positive, do not set its value. Write a test application named EmployeeTest that demonstrates
+//class Employee’s capabilities. Create two Employee objects and display each object’s yearly salary.
+//Then give each Employee a 10% raise and display each Employee’s yearly salary again
+
+ class Employee {
+	private String fname ;
+	private String lname ;
+	private double salary;
+	Employee(String fname, String lname, double salary) {
+		super();
+		this.fname = fname;
+		this.lname = lname;
+		this.salary = salary;
+	}
+	Employee() {
+		this("","",0);  //constructor chaining ;
+	}
+	public String getFname() {
+		return fname;
+	}
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+	public String getLname() {
+		return lname;
+	}
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		
+		if(salary>0)
+			{this.salary = salary;}
+	}
+	public void accept()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter first name ");
+		this.fname=sc.next();
+		System.out.println("Enter last name ");
+		this.lname=sc.next();
+		System.out.println("Enter Monthly Salary");
+		double sal;
+		sal=sc.nextDouble();
+		if(sal<0)
+		{
+			this.salary=0;
+		}
+		this.salary=sal;
+		
+	}
+
+	public void display()
+	{
+		System.out.println("First name = "+this.fname);
+		System.out.println("Last name = "+this.lname);
+		System.out.println("Salary = "+this.salary);
+		System.out.println("Yearly Salary = "+this.salary*12);
+	}
+	
+	public void raise()
+	{
+		double newsal=(this.salary*12)+(this.salary*12)*0.1;
+		System.out.println("Raised  Annual Salary ="+newsal);
+	}
+	
+	
+	
+
+}
+ public class EmployeeTest
+ {
+	public static void  main(String[] args)
+	{
+		Employee e1=new Employee();
+		e1.accept();
+		e1.display();
+		Employee e2=new Employee();
+		e2.accept();
+		e2.display();
+		System.out.println("After giving raise of 10%");
+		e1.display();
+		e1.raise();
+		e2.display();
+		e2.raise();
+	}
+	 
+ }
