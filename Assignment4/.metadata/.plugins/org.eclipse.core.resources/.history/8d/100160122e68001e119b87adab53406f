@@ -1,0 +1,30 @@
+package com.app.fruits;
+import java.util.*;
+
+public class FruitBasket {
+	public static void main(String[]args)
+	{
+		int index;
+		System.out.println("Enter no of fruits u want to add in Fruit Basket");
+		index=new Scanner(System.in).nextInt();
+		Fruit arr[] =new Fruit[index];
+		
+		int choice =1;
+		int count=0;
+		while(choice!=0)
+		{
+			System.out.println("0 - EXIT");
+			System.out.println("1 - ADD MANGO");
+			System.out.println("2 - ADD ORANGE");
+			System.out.println("3 - ADD APPLE");
+			System.out.println("4 - DISPLAY ALL NAME OF FRUITS IN BASKEET");
+			System.out.println("5 - DISPLAY NAME , COLOUR ,WEIGHT, TASTE OF ALL FRESH FRUITS");
+			System.out.println("6 - DISPLAY TASTES OF ALL STALE FRUITS IN BASKET");
+			System.out.println("0 - ENTER NO TO MARK AS STALE");
+			System.out.println("0 - MARK ALL SOUR FRUITS STALE ");
+			choice=new Scanner(System.in).
+			
+		}
+	}
+
+}

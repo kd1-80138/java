@@ -1,0 +1,36 @@
+package com.app.fruits;
+
+public class Mango extends Fruit{
+	private String name ="Mango";
+	
+	
+	public Mango(String colour, double weight, boolean isFresh, String name) {
+		super(colour, weight, isFresh);
+		this.name = name;
+	 
+	}
+	
+	public Mango() {
+		super("yellow",20);
+		this.name="Mango";
+		
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String  taste()
+	{
+		return "Taste is Sweet";
+	}
+	
+	
+	
+	
+
+}

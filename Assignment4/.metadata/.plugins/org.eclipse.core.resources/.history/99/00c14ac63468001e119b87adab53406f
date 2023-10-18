@@ -1,0 +1,21 @@
+package com.app.fruits;
+
+public class Orange extends Fruit {
+
+	
+	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String  taste()
+	{
+		return "Sour";
+	}
+
+}

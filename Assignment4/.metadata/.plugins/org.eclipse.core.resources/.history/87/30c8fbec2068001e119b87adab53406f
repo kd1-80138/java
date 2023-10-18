@@ -1,0 +1,51 @@
+package com.app.fruits;
+
+public class Fruit {
+	private String colour;
+	private double weight;
+	private boolean isFresh;
+	
+	Fruit()
+	{  
+	   
+	    this.isFresh=true;
+	}
+		
+	public Fruit(String colour, double weight, boolean isFresh) {
+		super();
+		this.colour = colour;
+		this.weight = weight;
+		this.isFresh = isFresh;
+	}
+
+	
+
+	public boolean isFresh() {
+		return isFresh;
+	}
+
+	public void setFresh(boolean isFresh) {
+		this.isFresh = isFresh;
+	}
+
+	public String getColour() {
+		return colour;
+	}
+	public void setColour(String colour) {
+		this.colour = colour;
+	}
+	public double getWeight() {
+		return weight;
+	}
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+	
+   public String taste()
+   {
+	   return "no specific Taste";
+   }
+
+	
+	
+}
