@@ -1,0 +1,6 @@
+package test;
+import com.app.geometry.*;
+
+public class TestPoint {
+
+}

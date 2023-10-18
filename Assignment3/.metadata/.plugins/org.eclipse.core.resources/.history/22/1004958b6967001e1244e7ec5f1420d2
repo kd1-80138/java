@@ -1,0 +1,26 @@
+package arrays;
+import java.util.*;
+
+public class demo01 {
+	
+	public static void main(String[]args)
+	{
+		
+		
+		//1-D array
+		int arr[]=new int[5];
+		//take input in array
+		for(int i=0;i<5;i++){
+			arr[i]=new Scanner(System.in).nextInt();
+			
+		}
+		for(int i=0;i<5;i++){
+			System.out.println("arr[" +i+"]="+arr[i]);
+			
+		}
+		
+	
+	
+	}
+
+}
