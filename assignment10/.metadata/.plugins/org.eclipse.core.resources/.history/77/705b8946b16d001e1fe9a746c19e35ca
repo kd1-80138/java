@@ -1,0 +1,20 @@
+package program02;
+
+import java.util.ArrayList;
+
+public class demo02 {
+
+	public static void main(String[] args) {
+		ArrayList<String> list=new ArrayList<String>();
+		
+		list.add("shekhar");
+		list.add("shinde");
+		list.add("tanay");
+		list.add("yashraj");
+		list.add("dhanraj");
+		list.add("pranav");
+  
+		System.out.println(list);
+	}
+
+}

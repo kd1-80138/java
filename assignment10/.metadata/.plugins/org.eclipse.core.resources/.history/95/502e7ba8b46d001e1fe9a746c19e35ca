@@ -1,0 +1,27 @@
+package program02;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.stream.Collector;
+
+public class demo02 {
+
+	public static void main(String[] args) {
+		ArrayList<String> list=new ArrayList<String>();
+		
+		Collections.addAll(list,"shekhar","shinde","tanay","krushna","yash","rahule");
+		 class stringComparetor implements Comparator<String>
+		 {
+		   public int compare(String s1,String s2) 
+		   {
+			 int diff=s1.length()-s2.length();
+			 return diff;
+		   }	 
+		 }
+		 stringComparetor compare=new stringComparetor();
+		 compare.compare(null, null)
+
+	}
+
+}

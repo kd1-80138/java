@@ -1,0 +1,110 @@
+package program01;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Tester {
+	public static int menu() {
+		int choice;
+		System.out.println("***************************************************************");
+		System.out.println("0.EXIT");
+		System.out.println("1.Add new book in List");
+		System.out.println("2. Display all books in forward order using random access");
+		System.out.println("3. Search a book with given isbn ");
+		System.out.println("4. Delete a book at given index.");
+		System.out.println("5. Delete a book with given isbn.");
+		System.out.println("6.Reverse the list");
+		System.out.println("***************************************************************");
+		System.out.print("Enter your choice=");
+		choice = new Scanner(System.in).nextInt();
+
+		return choice;
+	}
+
+	public static void main(String[] args) {
+		int choice;
+		ArrayList<Library> book = new ArrayList<>();
+		Iterator<Library> itr;
+		Library lib;
+		while ((choice = menu()) != 0) {
+			switch (choice) {
+			case 1:
+				 lib = new Library();
+				lib.acceptData();
+				if (book.contains(lib)) {
+					System.out.println("Book is present");
+					int index = book.indexOf(lib);
+					Library bk = book.get(index);
+					bk.setQuantity(bk.getQuantity() + 1);
+
+					System.out.println("quantity increase:" + bk.getQuantity());
+
+				} else {
+					book.add(lib);
+					System.out.println("Book is added succefully");
+				}
+
+				break;
+			case 2:// Display all books in forward order using random access
+				System.out.println(".................Displaying all book..................");
+				itr = book.iterator();
+				while(itr.hasNext())
+				{
+					lib=itr.next();
+					System.out.println(lib);
+				}
+
+				break;
+			case 3:
+				 Library key=new Library();
+				 String isbn;
+				 System.out.println("Enter the isbn of book");
+				isbn=new Scanner(System.in).next();
+				key.setIsbn(isbn);
+				if(book.contains(key)) 
+				{
+					int index=book.indexOf(key);
+					lib=book.get(index);
+					System.out.println(lib);
+					
+				}
+				break;
+			case 4:
+				System.out.print("Enter the book index to delete=");
+				int index;
+				index=new Scanner(System.in).nextInt();
+				book.remove(index);
+				System.out.println("Book deleted at index["+index+"]");
+				break;
+			case 5:
+				String isbn1;
+				Library lib1=new Library();
+				System.out.print("Enter the isbn of book which you want to to delete=");
+				isbn1=new Scanner(System.in).next();
+				lib1.setIsbn(isbn1);
+				if(book.contains(isbn1)) {
+					System.out.println("Book with given isbn  deleted");
+                  int ind=book.indexOf(lib1);	
+                  book.remove(ind);
+                  System.out.println("Book with given isbn  deleted");
+                  
+				}
+				
+				
+				break;
+			case 6:
+				Collections.reverse(book);
+				
+				System.out.println(book);
+				break;
+
+			default:
+				break;
+			}
+		}
+	}
+
+}

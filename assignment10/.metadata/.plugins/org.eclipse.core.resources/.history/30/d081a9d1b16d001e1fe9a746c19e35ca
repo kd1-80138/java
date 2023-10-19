@@ -1,0 +1,24 @@
+package program02;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+
+public class demo02 {
+
+	public static void main(String[] args) {
+		ArrayList<String> list=new ArrayList<String>();
+		
+		list.add("shekhar");
+		list.add("shinde");
+		list.add("tanay");
+		list.add("yashraj");
+		list.add("dhanraj");
+		list.add("pranav");
+  
+		System.out.println(list);
+		Collections.max(list);
+		System.out.println("max :"+list);
+	}
+
+}

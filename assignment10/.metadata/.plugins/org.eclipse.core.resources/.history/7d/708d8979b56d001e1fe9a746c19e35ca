@@ -1,0 +1,29 @@
+package program02;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+
+public class demo02 {
+
+	public static void main(String[] args) {
+		ArrayList<String> list=new ArrayList<String>();
+		
+		Collections.addAll(list,"shekhar","shinde","tanay","asharaj","krushna","yash","rahule");
+		 class stringComparetor implements Comparator<String>
+		 {
+		   public int compare(String s1,String s2) 
+		   {
+			 int diff=s1.length()-s2.length();
+			 return diff;
+		   }	 
+		 }
+		 stringComparetor com=new stringComparetor();
+	        
+		String maxlength= Collections.max(list, com);
+		System.out.println("max length :"+maxlength);
+
+	}
+
+}

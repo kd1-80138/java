@@ -1,0 +1,77 @@
+package program03;
+
+import java.util.Objects;
+import java.util.Scanner;
+
+public class Employee {
+	private int empid;
+	private String name;
+	private double salary;
+
+	Scanner sc = new Scanner(System.in);
+
+	public Employee() {
+
+	}
+
+	public Employee(int empid, String name, double salary) {
+
+		this.empid = empid;
+		this.name = name;
+		this.salary = salary;
+	}
+
+	public void acceptData() {
+		System.out.print("Enter the empid=");
+		empid = sc.nextInt();
+		System.out.print("Enter the name of employee=");
+		name = sc.next();
+		System.out.print("Enter the salary=");
+		salary = sc.nextDouble();
+
+	}
+
+	public int getEmpid() {
+		return empid;
+	}
+
+	public void setEmpid(int empid) {
+		this.empid = empid;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [empid=" + empid + ", name=" + name + ", salary=" + salary + "]";
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		
+		Employee other = (Employee) obj;
+		if(this.empid==other.empid)
+			return true;
+		else 
+			return false;
+		
+	}
+	
+
+}

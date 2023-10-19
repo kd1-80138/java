@@ -1,0 +1,22 @@
+package program04;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+public class SetCollection {
+
+	public static void main(String[] args) {
+		Collection<String> c=new ArrayList();
+		
+		c.add("B");
+		c.add("D");
+		c.add("A");
+		c.add("C");
+		c.add(null);
+		c.add(null);
+		c.add(null);
+		System.out.println(c.toString());
+
+	}
+
+}
