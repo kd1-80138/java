@@ -1,0 +1,50 @@
+package program01;
+
+import java.util.Arrays;
+
+public class Que1 {
+	String arr[]= new String[5];
+	String arr1[]= new String[5];
+	
+	arr[0]="shekhar";
+	arr[1]="tanay";
+	arr[2]="yash";
+	arr[3]="dhan";
+	arr[4]="pranav";
+	
+	arr1[0]="shinde";
+	arr1[1]="tanay";
+	arr1[2]="yashraj";
+	arr1[3]="dhan";
+	arr1[4]="pranav";
+	
+	
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.hashCode(arr);
+		result = prime * result + Arrays.hashCode(arr1);
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Que1 other = (Que1) obj;
+		return Arrays.equals(arr, other.arr) && Arrays.equals(arr1, other.arr1);
+	}
+
+	public static void main(String[] args) {
+		
+
+
+	}
+
+}
