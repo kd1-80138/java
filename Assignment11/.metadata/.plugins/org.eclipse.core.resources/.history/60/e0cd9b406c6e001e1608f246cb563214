@@ -1,0 +1,33 @@
+package com.sunbeam;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Program05 {
+	public static void main(String[]args )
+	{
+		Map<String,Book> map = new HashMap();
+		Book b= new Book("101",500.0,"aa",8);
+		map.put(b.getIsbn(), b);
+		Book c = new Book("103",400.0,"cc",5);
+		map.put(c.getIsbn(), c);
+		
+		Book d= new Book("102",700.0,"bb",7);
+		map.put(d.getIsbn(), d);
+		
+		Book e= new Book("101",500.0,"aa",8);
+		map.put(e.getIsbn(), e);
+		
+		System.out.println("enter isbn to searc for book");
+		String s= new Scanner(System.in).next();
+		if(map.containsKey(s)) {
+		  System.out.println("BOOK IS PRESENT");	
+		}
+		
+		System.out.println("enter Isbn to find for book");
+		s = new  Scanner(System.in).next();		
+		
+	}
+
+}

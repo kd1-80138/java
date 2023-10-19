@@ -1,0 +1,30 @@
+package com.sunbeam;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Program06 {
+	public static void main(String[] args)
+	{
+		Map<Integer,Sudent>hmap= new HashMap();
+		sSudent s= new Sudent();
+		int ch ;
+		do {
+			System.out.println("1- Enter Student");
+			System.out.println("2- Get student on roll number");
+			ch= new Scanner(System.in).nextInt();
+			switch(ch)
+			{
+			case 1:
+				
+				break;
+			case 2:
+				break;
+			}
+			
+			
+		}while(ch!=0);
+	}
+
+}

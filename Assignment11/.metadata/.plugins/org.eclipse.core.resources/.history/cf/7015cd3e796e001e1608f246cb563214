@@ -1,0 +1,42 @@
+package com.sunbeam;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class Program06 {
+	public static void main(String[] args)
+	{
+		Map<Integer,Sudent>hmap= new LinkedHashMap();
+		Sudent s;
+		int ch ;
+		do {
+			System.out.println("0- Exit");
+			System.out.println("1- Enter Student");
+			System.out.println("2- Get student on roll number");
+			ch= new Scanner(System.in).nextInt();
+			switch(ch)
+			{
+			case 1:// adds element in  linkedhash map
+				
+				s= new Sudent();
+				s.accept();
+				hmap.put(s.getRollno(),s);
+				break;
+			case 2:
+				//display value for given key;
+				System.out.println("......................................");
+			    System.out.println("Enter roll no to search for");
+			    int r= new Scanner(System.in).nextInt();
+			    System.out.println(hmap.get(r));
+				System.out.println("...........................................");
+
+				break;
+			}
+			
+			
+		}while(ch!=0);
+	}
+
+}
