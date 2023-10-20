@@ -1,0 +1,38 @@
+package com.sunbeam;
+import java.util.*;
+
+public class Manager implements Emp {
+	private double basicSalary;
+	private double deAllowance;
+	public Manager() {
+		
+	}
+	public Manager(double basicSalary, double deAllowance) {
+		
+		this.basicSalary = basicSalary;
+		this.deAllowance = deAllowance;
+	}
+	public double getBasicSalary() {
+		return basicSalary;
+	}
+	public void setBasicSalary(double basicSalary) {
+		this.basicSalary = basicSalary;
+	}
+	public double getDeAllowance() {
+		return deAllowance;
+	}
+	public void setDeAllowance(double deAllowance) {
+		this.deAllowance = deAllowance;
+	}
+	@Override
+	public String toString() {
+		return "Manager [basicSalary=" + basicSalary + ", deAllowance=" + deAllowance + "]";
+	}
+	
+	@Override
+	public double getSal() {
+	  return this.basicSalary;
+	}
+	
+
+}

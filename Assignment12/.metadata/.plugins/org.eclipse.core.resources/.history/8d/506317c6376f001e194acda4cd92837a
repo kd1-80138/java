@@ -1,0 +1,21 @@
+//Calculate the factorial of the given number using stream operations.
+
+
+package com.sunbeam;
+import java.util.*;
+import java.util.stream.Stream;
+
+public class Program06 {
+	
+	public static void main (String[]args)
+	{
+		Stream<Integer> strm3 = Stream.iterate(1, x -> x + 1).limit(10);
+		
+		strm3.forEach((k)->System.out.println(k));
+	 
+		
+		
+	}
+	
+
+}

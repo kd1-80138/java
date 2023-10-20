@@ -1,0 +1,6 @@
+package com.sunbeam;
+import java.util.function.*;
+import java.util.*;
+public class Program04 {
+
+}

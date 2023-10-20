@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.function.Predicate"/>
+    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
+    <fullyQualifiedTypeName name="java.util.IntSummaryStatistics"/>
+    <fullyQualifiedTypeName name="java.util.stream.IntStream"/>
+</qualifiedTypeNameHistroy>

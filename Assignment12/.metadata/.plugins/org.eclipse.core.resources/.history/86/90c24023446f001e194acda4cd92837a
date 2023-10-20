@@ -1,0 +1,17 @@
+
+//8. Create an IntStream to represent numbers from 1 to 10. Call various functions like sum(), summaryStatistics() and observe the output.package com.sunbeam;
+import java.util.function.*;
+import java.util.stream.IntStream;
+import java.util.*;
+
+public class Program08 {
+	public static void main(String[] args) {
+	Random r= new Random();
+	IntStream istr= IntStream.iterate(1, x->x+1)
+			.limit(11);
+	int no= istr.max();
+	
+	
+	}
+
+}

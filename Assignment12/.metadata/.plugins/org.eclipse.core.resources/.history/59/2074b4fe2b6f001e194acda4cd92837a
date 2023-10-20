@@ -1,0 +1,47 @@
+//3. Create a functional interface Arithmetic with single abstract method double calc(double,double). Write a static method calculate() in main
+//class as follows. In main(), write a menu driven program that inputs two numbers from the user and calls calculate() method with appropriate lambda
+//expression (in arg3) to perform addition, subtraction, multiplication and division operations.
+
+package com.sunbeam;
+
+import java.util.function.*;
+import java.util.*;
+
+interface Arithmetic {
+	public double calc(double b1, double b2);
+}
+
+public class Program02 {
+
+	static void calculate(double num1, double num2, BinaryOperator<Double>op) {
+		double result = op.calc(num1, num2);
+		System.out.println("Result: " + result);
+	}
+	public static void main(String[] args )
+	{
+		 double a=4.5;
+		 double b= 6.5;
+		
+		int ch =0;
+		do {
+			System.out.println("1- Addition \n 2- Substraction \n 3-Multiplication \n 4- Division");
+			System.out.println("Enter your choice ");
+			ch = new Scanner(System.in).nextInt();
+			
+			switch(ch)
+			{
+			case 1:// addition 
+				    calculate(x,y, (x,y)->a+b);
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			}
+			
+			
+			
+		}while(ch!=0);
+	}
+
+}
