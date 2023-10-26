@@ -1,0 +1,15 @@
+package com.sunbeam;
+
+public class Demo01 {
+	public static void main(String[]args ) {
+	try (CandidateDao dao= new CandidateDao()){
+		dao.accept();
+		
+		dao.addCandidate(can);
+	}
+	
+	
+	
+	
+	}
+}

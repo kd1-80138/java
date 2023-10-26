@@ -1,0 +1,45 @@
+package com.sunbeam;
+
+import java.util.Scanner;
+
+public class program02 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		 
+	/*	
+		// add user 
+		 try (UserDao dao= new UserDao()){
+			 User us= new User();
+			 us.accept();
+			 dao.addUser(us);
+		 }catch(Exception e ) {
+			 e.printStackTrace();
+			 
+		 }
+		
+		*/
+		/*
+		//delete user
+		try (UserDao dao= new UserDao()){
+			System.out.println("enter id to delete for ");
+			int id = sc.nextInt();
+			dao.deleteUser(id);
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		*/
+		
+		//Display all ;
+		try (UserDao dao= new UserDao()){
+			dao.displayAll();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+}

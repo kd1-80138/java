@@ -1,0 +1,40 @@
+package com.sunbeam;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class CandidateDao implements AutoCloseable {
+	private Connection con ;
+	public CandidateDao() throws SQLException
+	{
+		con = DbUtil.getConnection();
+	}
+	@Override
+	public void close() throws Exception {
+		try {
+			if(con!=null)
+				 con.close();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}	
+	}
+	//add candidate
+	public void addCandidate(Candidate c) throws Exception {
+		String sql= "insert into candidates values(default, ?, ?, ?)";
+		try (PreparedStatement stat= con.prepareStatement(sql)){
+			
+			 stat.setString(1, c.getName());
+			 stat.setString(2, c.getParty());
+			 stat.setInt(3, c.getVotes());
+			 int cnt = stat.executeUpdate();
+			 System.out.println("rows affected"+ cnt);
+			 
+			
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+
+}

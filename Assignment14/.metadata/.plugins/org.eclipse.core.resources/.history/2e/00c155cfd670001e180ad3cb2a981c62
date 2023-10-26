@@ -1,0 +1,18 @@
+package com.sunbeam;
+
+import java.sql.Connection;
+
+public class CandidateDao implements AutoCloseable {
+	private Connection con ;
+	public CandidateDao()
+	{
+		con = DbUtil.getConnection();
+	}
+	@Override
+	private void close() {
+		// TODO Auto-generated method stub
+
+	}
+	
+
+}

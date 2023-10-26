@@ -1,0 +1,37 @@
+package com.sunbeam;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class Demo01 {
+	public static void main(String[]args){
+	Scanner sc = new Scanner (System.in );
+		
+		try(CandidateDao dao= new CandidateDao()){
+			Candidate ca= new Candidate();
+			System.out.println("Enter name ");
+			 String name = sc.next();
+			 ca.setName(name);
+			System.out.println("Enter party ");
+			String party = sc.next();
+			ca.setParty(party);
+			System.out.println("Enter Votes");
+			 int votes =sc.nextInt();
+			 ca.setVotes(votes);
+			
+			
+			dao.addCandidate(ca);
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	
+	
+	
+	
+	}
+}

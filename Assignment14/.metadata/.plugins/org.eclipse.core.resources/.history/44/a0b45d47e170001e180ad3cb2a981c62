@@ -1,0 +1,60 @@
+package com.sunbeam;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+public class Demo01 {
+	public static void main(String[]args){
+	Scanner sc = new Scanner (System.in );
+
+	
+	/*
+	//deletes candidate 
+	try (CandidateDao dao= new CandidateDao()){
+		
+	     System.out.println("Enter Id to delete Candidate ");
+	     int id = sc.nextInt();
+	     dao.deleteCandidate(id);
+		
+	}catch (Exception e)
+	{
+		e.printStackTrace();
+	}
+	*/
+	
+	/*
+	// adds to db;	
+		try(CandidateDao dao= new CandidateDao()){
+			Candidate ca= new Candidate();
+			ca.accept();
+			dao.addCandidate(ca);
+			
+		}catch(SQLException e)
+		{
+			e.printStackTrace();
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
+	
+	*/
+	
+	//updates Candidate 
+	try(CandidateDao dao= new CandidateDao()) {
+		
+		System.out.println("ENter id to be modified for ");
+		int id = sc.nextInt();
+		System.out.println("Enter name to update  ");
+		String name = sc.next();
+		System.out.println("Enter Party to update for ");
+	    String party = sc.next();
+	    dao.deleteCandidate(name , party,id);
+	    
+	}catch (Exception e) {
+		e.printStackTrace();
+	}
+	
+	
+	}
+}

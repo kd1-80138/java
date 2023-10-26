@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+/home/sunbeam/push data/Assignment14/.metadata/.plugins/org.eclipse.jdt.core
+2988671989.index
+2089789477.index
+1865797976.index
+3973718745.index
+646308851.index

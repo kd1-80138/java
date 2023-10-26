@@ -1,0 +1,26 @@
+package com.sunbeam;
+
+import java.sql.SQLException;
+
+public class Demo01 {
+	public static void main(String[]args){
+	
+		
+		try(CandidateDao dao= new CandidateDao()){
+			Candidate ca= new Candidate();
+			ca.accept();
+			dao.addCandidate(ca);
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	
+	
+	
+	
+	}
+}
